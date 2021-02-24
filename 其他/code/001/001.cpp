@@ -29,7 +29,9 @@ int main()
 	{
 		for (i = 0; i <= 4 * n2; ++i)
 		{
-			if (i + a[j] > 4 * n2 || m[i + a[j]][j - 1] == SHRT_MIN)
+			if (i + a[j] > 4 * n2)
+				c1 = m[4 * n2][j - 1] - a[j];
+			else if (m[i + a[j]][j - 1] == SHRT_MIN)
 				c1 = SHRT_MIN;
 			else
 				c1 = m[i + a[j]][j - 1] - a[j];
