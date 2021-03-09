@@ -8,8 +8,8 @@ public:
 
 	void appendTail(int const& value)
 	{
+		p[i + j] = value;
 		++j;
-		p[i + j - 1] = value;
 	}
 
 	int deleteHead()
